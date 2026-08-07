@@ -1,0 +1,32 @@
+apiVersion: outpost.authentik.m.goauthentik.io/v1alpha1
+kind: Outpost
+metadata:
+  annotations:
+    meta.upbound.io/example-id: outpost/v1alpha1/outpost
+  labels:
+    testing.upbound.io/example-name: outpost
+  name: outpost
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: test-outpost
+    protocolProvidersRefs:
+    - name: proxy
+
+---
+
+apiVersion: provider.authentik.m.goauthentik.io/v1alpha1
+kind: Proxy
+metadata:
+  annotations:
+    meta.upbound.io/example-id: outpost/v1alpha1/outpost
+  labels:
+    testing.upbound.io/example-name: proxy
+  name: proxy
+  namespace: upbound-system
+spec:
+  forProvider:
+    authorizationFlow: ${data.authentik_flow.default-authorization-flow.id}
+    externalHost: http://foo.bar.baz
+    internalHost: http://internal.local
+    name: proxy

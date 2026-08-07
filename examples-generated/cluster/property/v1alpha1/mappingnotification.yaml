@@ -1,0 +1,12 @@
+apiVersion: property.authentik.goauthentik.io/v1alpha1
+kind: MappingNotification
+metadata:
+  annotations:
+    meta.upbound.io/example-id: property/v1alpha1/mappingnotification
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+spec:
+  forProvider:
+    expression: 'return {"foo": context[''foo'']}'
+    name: custom-field

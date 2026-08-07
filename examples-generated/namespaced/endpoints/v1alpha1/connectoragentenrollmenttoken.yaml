@@ -1,0 +1,17 @@
+apiVersion: endpoints.authentik.m.goauthentik.io/v1alpha1
+kind: ConnectorAgentEnrollmentToken
+metadata:
+  annotations:
+    meta.upbound.io/example-id: endpoints/v1alpha1/connectoragentenrollmenttoken
+  labels:
+    testing.upbound.io/example-name: token
+  name: token
+  namespace: upbound-system
+spec:
+  forProvider:
+    connectorSelector:
+      matchLabels:
+        testing.upbound.io/example-name: agent
+    expiring: false
+    name: my-enrollment token
+    retrieveKey: true

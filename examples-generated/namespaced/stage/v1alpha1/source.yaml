@@ -1,0 +1,38 @@
+apiVersion: stage.authentik.m.goauthentik.io/v1alpha1
+kind: Source
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/source
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: source-stage
+    sourceSelector:
+      matchLabels:
+        testing.upbound.io/example-name: name
+
+---
+
+apiVersion: source.authentik.m.goauthentik.io/v1alpha1
+kind: Oauth
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/source
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    authenticationFlow: ${data.authentik_flow.default-authorization-flow.id}
+    consumerKey: foo
+    consumerSecretSecretRef:
+      key: example-key
+      name: example-secret
+    enrollmentFlow: ${data.authentik_flow.default-authorization-flow.id}
+    name: discord
+    providerType: discord
+    slug: discord

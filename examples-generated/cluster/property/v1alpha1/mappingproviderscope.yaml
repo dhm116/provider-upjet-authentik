@@ -1,0 +1,16 @@
+apiVersion: property.authentik.goauthentik.io/v1alpha1
+kind: MappingProviderScope
+metadata:
+  annotations:
+    meta.upbound.io/example-id: property/v1alpha1/mappingproviderscope
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+spec:
+  forProvider:
+    expression: |
+      return {
+        "policy": "readwrite",
+      }
+    name: minio
+    scopeName: minio

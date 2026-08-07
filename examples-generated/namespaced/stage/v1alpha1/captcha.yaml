@@ -1,0 +1,16 @@
+apiVersion: stage.authentik.m.goauthentik.io/v1alpha1
+kind: Captcha
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/captcha
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: captcha
+    privateKeySecretRef:
+      key: example-key
+      name: example-secret
+    publicKey: bar

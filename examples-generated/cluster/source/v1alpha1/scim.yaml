@@ -1,0 +1,12 @@
+apiVersion: source.authentik.goauthentik.io/v1alpha1
+kind: Scim
+metadata:
+  annotations:
+    meta.upbound.io/example-id: source/v1alpha1/scim
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+spec:
+  forProvider:
+    name: test-source
+    slug: test-source

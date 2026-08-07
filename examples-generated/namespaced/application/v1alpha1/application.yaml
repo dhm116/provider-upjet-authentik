@@ -1,0 +1,73 @@
+apiVersion: application.authentik.m.goauthentik.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/application
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: example-app
+    protocolProviderSelector:
+      matchLabels:
+        testing.upbound.io/example-name: name
+    slug: example-app
+
+---
+
+apiVersion: policy.authentik.m.goauthentik.io/v1alpha1
+kind: Binding
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/application
+  labels:
+    testing.upbound.io/example-name: app-access
+  name: app-access
+  namespace: upbound-system
+spec:
+  forProvider:
+    order: 0
+    policySelector:
+      matchLabels:
+        testing.upbound.io/example-name: policy
+    targetSelector:
+      matchLabels:
+        testing.upbound.io/example-name: name
+
+---
+
+apiVersion: policy.authentik.m.goauthentik.io/v1alpha1
+kind: Expression
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/application
+  labels:
+    testing.upbound.io/example-name: policy
+  name: policy
+  namespace: upbound-system
+spec:
+  forProvider:
+    expression: return True
+    name: example
+
+---
+
+apiVersion: provider.authentik.m.goauthentik.io/v1alpha1
+kind: Oauth2
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/application
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    authorizationFlow: ${data.authentik_flow.default-authorization-flow.id}
+    clientId: example-app
+    clientSecretSecretRef:
+      key: example-key
+      name: example-secret
+    name: example-app

@@ -1,4 +1,4 @@
-module github.com/crossplane/upjet-provider-template
+module github.com/dhm116/provider-authentik
 
 go 1.26.5
 

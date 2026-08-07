@@ -1,0 +1,16 @@
+apiVersion: source.authentik.goauthentik.io/v1alpha1
+kind: SAML
+metadata:
+  annotations:
+    meta.upbound.io/example-id: source/v1alpha1/saml
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+spec:
+  forProvider:
+    authenticationFlow: ${data.authentik_flow.default-source-authentication.id}
+    enrollmentFlow: ${data.authentik_flow.default-source-enrollment.id}
+    name: test-source
+    preAuthenticationFlow: ${data.authentik_flow.default-source-pre-authentication.id}
+    slug: test-source
+    ssoUrl: http://localhost

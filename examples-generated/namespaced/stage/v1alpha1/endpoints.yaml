@@ -1,0 +1,15 @@
+apiVersion: stage.authentik.m.goauthentik.io/v1alpha1
+kind: Endpoints
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/endpoints
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    connectorSelector:
+      matchLabels:
+        testing.upbound.io/example-name: name
+    name: agent-connector

@@ -1,0 +1,65 @@
+apiVersion: application.authentik.m.goauthentik.io/v1alpha1
+kind: Entitlement
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/entitlement
+  labels:
+    testing.upbound.io/example-name: ent
+  name: ent
+  namespace: upbound-system
+spec:
+  forProvider:
+    applicationSelector:
+      matchLabels:
+        testing.upbound.io/example-name: name
+    name: test-ent
+
+---
+
+apiVersion: application.authentik.m.goauthentik.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/entitlement
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: example-app
+    slug: example-app
+
+---
+
+apiVersion: authentik.authentik.m.goauthentik.io/v1alpha1
+kind: Group
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/entitlement
+  labels:
+    testing.upbound.io/example-name: group
+  name: group
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: test-ent-group
+
+---
+
+apiVersion: policy.authentik.m.goauthentik.io/v1alpha1
+kind: Binding
+metadata:
+  annotations:
+    meta.upbound.io/example-id: application/v1alpha1/entitlement
+  labels:
+    testing.upbound.io/example-name: test-ent-access
+  name: test-ent-access
+  namespace: upbound-system
+spec:
+  forProvider:
+    group: ${authentik_group.group.id}
+    order: 0
+    targetSelector:
+      matchLabels:
+        testing.upbound.io/example-name: ent

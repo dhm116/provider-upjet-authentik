@@ -1,0 +1,16 @@
+apiVersion: certificate.authentik.m.goauthentik.io/v1alpha1
+kind: KeyPair
+metadata:
+  annotations:
+    meta.upbound.io/example-id: certificate/v1alpha1/keypair
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    certificateData: ${tls_self_signed_cert.example.cert_pem}
+    keyDataSecretRef:
+      key: attribute.private_key_pem
+      name: example-private-key
+    name: keypair

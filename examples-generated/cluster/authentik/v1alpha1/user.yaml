@@ -1,0 +1,26 @@
+apiVersion: authentik.authentik.goauthentik.io/v1alpha1
+kind: User
+metadata:
+  annotations:
+    meta.upbound.io/example-id: authentik/v1alpha1/user
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+spec:
+  forProvider:
+    name: User
+    username: user
+
+---
+
+apiVersion: authentik.authentik.goauthentik.io/v1alpha1
+kind: Group
+metadata:
+  annotations:
+    meta.upbound.io/example-id: authentik/v1alpha1/user
+  labels:
+    testing.upbound.io/example-name: group
+  name: group
+spec:
+  forProvider:
+    name: group-name

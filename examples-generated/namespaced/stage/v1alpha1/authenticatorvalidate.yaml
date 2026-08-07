@@ -1,0 +1,15 @@
+apiVersion: stage.authentik.m.goauthentik.io/v1alpha1
+kind: AuthenticatorValidate
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/authenticatorvalidate
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    deviceClasses:
+    - static
+    name: authenticator-validate
+    notConfiguredAction: skip

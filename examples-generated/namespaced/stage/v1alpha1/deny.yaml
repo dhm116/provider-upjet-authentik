@@ -1,0 +1,12 @@
+apiVersion: stage.authentik.m.goauthentik.io/v1alpha1
+kind: Deny
+metadata:
+  annotations:
+    meta.upbound.io/example-id: stage/v1alpha1/deny
+  labels:
+    testing.upbound.io/example-name: name
+  name: name
+  namespace: upbound-system
+spec:
+  forProvider:
+    name: deny

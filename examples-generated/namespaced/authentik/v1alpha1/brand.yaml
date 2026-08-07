@@ -1,0 +1,14 @@
+apiVersion: authentik.authentik.m.goauthentik.io/v1alpha1
+kind: Brand
+metadata:
+  annotations:
+    meta.upbound.io/example-id: authentik/v1alpha1/brand
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+  namespace: upbound-system
+spec:
+  forProvider:
+    brandingTitle: test
+    default: true
+    domain: .

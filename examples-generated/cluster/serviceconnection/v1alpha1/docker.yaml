@@ -1,0 +1,46 @@
+apiVersion: serviceconnection.authentik.goauthentik.io/v1alpha1
+kind: Docker
+metadata:
+  annotations:
+    meta.upbound.io/example-id: serviceconnection/v1alpha1/docker
+  labels:
+    testing.upbound.io/example-name: local
+  name: local
+spec:
+  forProvider:
+    local: true
+    name: local
+
+---
+
+apiVersion: certificate.authentik.goauthentik.io/v1alpha1
+kind: KeyPair
+metadata:
+  annotations:
+    meta.upbound.io/example-id: serviceconnection/v1alpha1/docker
+  labels:
+    testing.upbound.io/example-name: tls-auth
+  name: tls-auth
+spec:
+  forProvider:
+    certificateData: '...'
+    keyDataSecretRef:
+      key: example-key
+      name: example-secret
+      namespace: upbound-system
+    name: docker-tls-auth
+
+---
+
+apiVersion: certificate.authentik.goauthentik.io/v1alpha1
+kind: KeyPair
+metadata:
+  annotations:
+    meta.upbound.io/example-id: serviceconnection/v1alpha1/docker
+  labels:
+    testing.upbound.io/example-name: tls-verification
+  name: tls-verification
+spec:
+  forProvider:
+    certificateData: '...'
+    name: docker-tls-verification

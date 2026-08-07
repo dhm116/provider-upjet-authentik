@@ -10,15 +10,49 @@ package cluster
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/crossplane/upjet-provider-template/apis/cluster/null/v1alpha1"
-	v1alpha1cluster "github.com/crossplane/upjet-provider-template/apis/cluster/v1alpha1"
-	v1beta1 "github.com/crossplane/upjet-provider-template/apis/cluster/v1beta1"
+	v1alpha1 "github.com/dhm116/provider-authentik/apis/cluster/application/v1alpha1"
+	v1alpha1authentik "github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1"
+	v1alpha1certificate "github.com/dhm116/provider-authentik/apis/cluster/certificate/v1alpha1"
+	v1alpha1endpoints "github.com/dhm116/provider-authentik/apis/cluster/endpoints/v1alpha1"
+	v1alpha1enterprise "github.com/dhm116/provider-authentik/apis/cluster/enterprise/v1alpha1"
+	v1alpha1event "github.com/dhm116/provider-authentik/apis/cluster/event/v1alpha1"
+	v1alpha1flow "github.com/dhm116/provider-authentik/apis/cluster/flow/v1alpha1"
+	v1alpha1outpost "github.com/dhm116/provider-authentik/apis/cluster/outpost/v1alpha1"
+	v1alpha1policy "github.com/dhm116/provider-authentik/apis/cluster/policy/v1alpha1"
+	v1alpha1property "github.com/dhm116/provider-authentik/apis/cluster/property/v1alpha1"
+	v1alpha1provider "github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1"
+	v1alpha1rac "github.com/dhm116/provider-authentik/apis/cluster/rac/v1alpha1"
+	v1alpha1rbac "github.com/dhm116/provider-authentik/apis/cluster/rbac/v1alpha1"
+	v1alpha1serviceconnection "github.com/dhm116/provider-authentik/apis/cluster/serviceconnection/v1alpha1"
+	v1alpha1source "github.com/dhm116/provider-authentik/apis/cluster/source/v1alpha1"
+	v1alpha1stage "github.com/dhm116/provider-authentik/apis/cluster/stage/v1alpha1"
+	v1alpha1system "github.com/dhm116/provider-authentik/apis/cluster/system/v1alpha1"
+	v1alpha1task "github.com/dhm116/provider-authentik/apis/cluster/task/v1alpha1"
+	v1alpha1cluster "github.com/dhm116/provider-authentik/apis/cluster/v1alpha1"
+	v1beta1 "github.com/dhm116/provider-authentik/apis/cluster/v1beta1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1authentik.SchemeBuilder.AddToScheme,
+		v1alpha1certificate.SchemeBuilder.AddToScheme,
+		v1alpha1endpoints.SchemeBuilder.AddToScheme,
+		v1alpha1enterprise.SchemeBuilder.AddToScheme,
+		v1alpha1event.SchemeBuilder.AddToScheme,
+		v1alpha1flow.SchemeBuilder.AddToScheme,
+		v1alpha1outpost.SchemeBuilder.AddToScheme,
+		v1alpha1policy.SchemeBuilder.AddToScheme,
+		v1alpha1property.SchemeBuilder.AddToScheme,
+		v1alpha1provider.SchemeBuilder.AddToScheme,
+		v1alpha1rac.SchemeBuilder.AddToScheme,
+		v1alpha1rbac.SchemeBuilder.AddToScheme,
+		v1alpha1serviceconnection.SchemeBuilder.AddToScheme,
+		v1alpha1source.SchemeBuilder.AddToScheme,
+		v1alpha1stage.SchemeBuilder.AddToScheme,
+		v1alpha1system.SchemeBuilder.AddToScheme,
+		v1alpha1task.SchemeBuilder.AddToScheme,
 		v1alpha1cluster.SchemeBuilder.AddToScheme,
 		v1beta1.SchemeBuilder.AddToScheme,
 	)

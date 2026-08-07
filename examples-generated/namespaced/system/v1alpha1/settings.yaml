@@ -1,0 +1,12 @@
+apiVersion: system.authentik.m.goauthentik.io/v1alpha1
+kind: Settings
+metadata:
+  annotations:
+    meta.upbound.io/example-id: system/v1alpha1/settings
+  labels:
+    testing.upbound.io/example-name: settings
+  name: settings
+  namespace: upbound-system
+spec:
+  forProvider:
+    defaultUserChangeUsername: true

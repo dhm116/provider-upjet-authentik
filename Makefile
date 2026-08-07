@@ -14,12 +14,14 @@ export TERRAFORM_PROVIDER_SOURCE ?= goauthentik/authentik
 export TERRAFORM_PROVIDER_REPO ?= https://github.com/goauthentik/terraform-provider-authentik
 export TERRAFORM_PROVIDER_VERSION ?= 2026.5.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME ?= terraform-provider-authentik
-export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://releases.hashicorp.com/$(TERRAFORM_PROVIDER_DOWNLOAD_NAME)/$(TERRAFORM_PROVIDER_VERSION)
-export TERRAFORM_NATIVE_PROVIDER_BINARY ?= terraform-provider-authentik_2026.5.0
+
+export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://github.com/goauthentik/$(TERRAFORM_PROVIDER_DOWNLOAD_NAME)/releases/download/$(TERRAFORM_PROVIDER_VERSION)
+export TERRAFORM_NATIVE_PROVIDER_BINARY ?= $(TERRAFORM_PROVIDER_DOWNLOAD_NAME)_$(TERRAFORM_PROVIDER_VERSION)
 export TERRAFORM_DOCS_PATH ?= docs/resources
 
 
-PLATFORMS ?= linux_amd64 linux_arm64
+# PLATFORMS ?= linux_amd64 linux_arm64
+PLATFORMS ?= darwin_amd64 darwin_arm64 freebsd_386 freebsd_amd64 freebsd_arm freebsd_arm64 linux_386 linux_amd64 linux_arm linux_arm64 windows_386 windows_amd64 windows_arm64
 
 # -include will silently skip missing files, which allows us
 # to load those files with a target in the Makefile. If only

@@ -134,14 +134,14 @@ var ExternalNameConfigs = map[string]config.ExternalName{
 	"authentik_endpoints_google_chrome_connector":          config.IdentifierFromProvider,
 }
 
-func idWithStub() config.ExternalName {
-	e := config.IdentifierFromProvider
-	e.GetExternalNameFn = func(tfstate map[string]any) (string, error) {
-		en, _ := config.IDAsExternalName(tfstate)
-		return en, nil
-	}
-	return e
-}
+// func idWithStub() config.ExternalName {
+// 	e := config.IdentifierFromProvider
+// 	e.GetExternalNameFn = func(tfstate map[string]any) (string, error) {
+// 		en, _ := config.IDAsExternalName(tfstate)
+// 		return en, nil
+// 	}
+// 	return e
+// }
 
 // ExternalNameConfigurations applies all external name configs listed in the
 // table ExternalNameConfigs and sets the version of those resources to v1beta1

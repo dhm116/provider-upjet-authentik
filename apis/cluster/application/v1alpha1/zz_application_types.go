@@ -52,7 +52,7 @@ type ApplicationInitParameters struct {
 	PolicyEngineMode *string `json:"policyEngineMode,omitempty" tf:"policy_engine_mode,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Oauth2
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Oauth2
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	ProtocolProvider *float64 `json:"protocolProvider,omitempty" tf:"protocol_provider,omitempty"`
 
@@ -173,7 +173,7 @@ type ApplicationParameters struct {
 	PolicyEngineMode *string `json:"policyEngineMode,omitempty" tf:"policy_engine_mode,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Oauth2
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Oauth2
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	ProtocolProvider *float64 `json:"protocolProvider,omitempty" tf:"protocol_provider,omitempty"`

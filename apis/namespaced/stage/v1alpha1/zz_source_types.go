@@ -23,7 +23,7 @@ type SourceInitParameters struct {
 	ResumeTimeout *string `json:"resumeTimeout,omitempty" tf:"resume_timeout,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/source/v1alpha1.Oauth
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/source/v1alpha1.Oauth
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Source *string `json:"source,omitempty" tf:"source,omitempty"`
 
@@ -64,7 +64,7 @@ type SourceParameters struct {
 	ResumeTimeout *string `json:"resumeTimeout,omitempty" tf:"resume_timeout,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/source/v1alpha1.Oauth
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/source/v1alpha1.Oauth
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Source *string `json:"source,omitempty" tf:"source,omitempty"`

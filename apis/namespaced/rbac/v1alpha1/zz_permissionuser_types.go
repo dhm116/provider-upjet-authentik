@@ -142,7 +142,7 @@ type PermissionUserInitParameters struct {
 	Model *string `json:"model,omitempty" tf:"model,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	ObjectID *string `json:"objectId,omitempty" tf:"object_id,omitempty"`
 
@@ -158,7 +158,7 @@ type PermissionUserInitParameters struct {
 	Permission *string `json:"permission,omitempty" tf:"permission,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	User *float64 `json:"user,omitempty" tf:"user,omitempty"`
 
@@ -442,7 +442,7 @@ type PermissionUserParameters struct {
 	Model *string `json:"model,omitempty" tf:"model,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	// +kubebuilder:validation:Optional
 	ObjectID *string `json:"objectId,omitempty" tf:"object_id,omitempty"`
@@ -460,7 +460,7 @@ type PermissionUserParameters struct {
 	Permission *string `json:"permission,omitempty" tf:"permission,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	User *float64 `json:"user,omitempty" tf:"user,omitempty"`

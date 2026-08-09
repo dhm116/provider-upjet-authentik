@@ -32,7 +32,7 @@ type IdentificationInitParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/stage/v1alpha1.Password
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/stage/v1alpha1.Password
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	PasswordStage *string `json:"passwordStage,omitempty" tf:"password_stage,omitempty"`
 
@@ -63,7 +63,7 @@ type IdentificationInitParameters struct {
 	ShowSourceLabels *bool `json:"showSourceLabels,omitempty" tf:"show_source_labels,omitempty"`
 
 	// (List of String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/source/v1alpha1.Oauth
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/source/v1alpha1.Oauth
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	Sources []*string `json:"sources,omitempty" tf:"sources,omitempty"`
 
@@ -158,7 +158,7 @@ type IdentificationParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/stage/v1alpha1.Password
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/stage/v1alpha1.Password
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	PasswordStage *string `json:"passwordStage,omitempty" tf:"password_stage,omitempty"`
@@ -195,7 +195,7 @@ type IdentificationParameters struct {
 	ShowSourceLabels *bool `json:"showSourceLabels,omitempty" tf:"show_source_labels,omitempty"`
 
 	// (List of String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/source/v1alpha1.Oauth
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/source/v1alpha1.Oauth
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	// +kubebuilder:validation:Optional
 	Sources []*string `json:"sources,omitempty" tf:"sources,omitempty"`

@@ -42,7 +42,7 @@ type StageBindingInitParameters struct {
 	ReEvaluatePolicies *bool `json:"reEvaluatePolicies,omitempty" tf:"re_evaluate_policies,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/stage/v1alpha1.Dummy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/stage/v1alpha1.Dummy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Stage *string `json:"stage,omitempty" tf:"stage,omitempty"`
 
@@ -55,7 +55,7 @@ type StageBindingInitParameters struct {
 	StageSelector *v2.Selector `json:"stageSelector,omitempty" tf:"-"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	Target *string `json:"target,omitempty" tf:"target,omitempty"`
 
@@ -140,7 +140,7 @@ type StageBindingParameters struct {
 	ReEvaluatePolicies *bool `json:"reEvaluatePolicies,omitempty" tf:"re_evaluate_policies,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/stage/v1alpha1.Dummy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/stage/v1alpha1.Dummy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Stage *string `json:"stage,omitempty" tf:"stage,omitempty"`
@@ -154,7 +154,7 @@ type StageBindingParameters struct {
 	StageSelector *v2.Selector `json:"stageSelector,omitempty" tf:"-"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	// +kubebuilder:validation:Optional
 	Target *string `json:"target,omitempty" tf:"target,omitempty"`

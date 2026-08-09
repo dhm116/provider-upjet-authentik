@@ -1,6 +1,6 @@
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-authentik
+  name: provider-upjet-authentik
 spec:
-  package: xpkg.crossplane.io/dhm116/provider-authentik:v0.1.0
+  package: xpkg.crossplane.io/dhm116/provider-upjet-authentik:v0.1.0

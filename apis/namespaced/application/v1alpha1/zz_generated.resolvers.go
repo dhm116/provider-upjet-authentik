@@ -8,9 +8,10 @@ package v1alpha1
 
 import (
 	"context"
+
 	reference "github.com/crossplane/crossplane-runtime/v2/pkg/reference"
 	resource "github.com/crossplane/upjet/v2/pkg/resource"
-	v1alpha1 "github.com/dhm116/provider-authentik/apis/namespaced/provider/v1alpha1"
+	v1alpha1 "github.com/dhm116/provider-upjet-authentik/apis/namespaced/provider/v1alpha1"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )

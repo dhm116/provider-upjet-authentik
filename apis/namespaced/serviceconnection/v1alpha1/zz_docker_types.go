@@ -23,7 +23,7 @@ type DockerInitParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	TLSAuthentication *string `json:"tlsAuthentication,omitempty" tf:"tls_authentication,omitempty"`
 
@@ -36,7 +36,7 @@ type DockerInitParameters struct {
 	TLSAuthenticationSelector *v2.NamespacedSelector `json:"tlsAuthenticationSelector,omitempty" tf:"-"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	TLSVerification *string `json:"tlsVerification,omitempty" tf:"tls_verification,omitempty"`
 
@@ -88,7 +88,7 @@ type DockerParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	TLSAuthentication *string `json:"tlsAuthentication,omitempty" tf:"tls_authentication,omitempty"`
@@ -102,7 +102,7 @@ type DockerParameters struct {
 	TLSAuthenticationSelector *v2.NamespacedSelector `json:"tlsAuthenticationSelector,omitempty" tf:"-"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/certificate/v1alpha1.KeyPair
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	TLSVerification *string `json:"tlsVerification,omitempty" tf:"tls_verification,omitempty"`

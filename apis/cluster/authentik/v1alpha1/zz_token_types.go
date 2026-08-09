@@ -42,7 +42,7 @@ type TokenInitParameters struct {
 	RetrieveKey *bool `json:"retrieveKey,omitempty" tf:"retrieve_key,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	User *float64 `json:"user,omitempty" tf:"user,omitempty"`
 
@@ -129,7 +129,7 @@ type TokenParameters struct {
 	RetrieveKey *bool `json:"retrieveKey,omitempty" tf:"retrieve_key,omitempty"`
 
 	// (Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	User *float64 `json:"user,omitempty" tf:"user,omitempty"`

@@ -7,7 +7,7 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/pipeline"
 
-	"github.com/dhm116/provider-authentik/config"
+	"github.com/dhm116/provider-upjet-authentik/config"
 )
 
 func main() {

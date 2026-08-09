@@ -16,7 +16,7 @@ import (
 type ConnectorAgentEnrollmentTokenInitParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/endpoints/v1alpha1.ConnectorAgent
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/endpoints/v1alpha1.ConnectorAgent
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Connector *string `json:"connector,omitempty" tf:"connector,omitempty"`
 
@@ -79,7 +79,7 @@ type ConnectorAgentEnrollmentTokenObservation struct {
 type ConnectorAgentEnrollmentTokenParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/endpoints/v1alpha1.ConnectorAgent
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/endpoints/v1alpha1.ConnectorAgent
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Connector *string `json:"connector,omitempty" tf:"connector,omitempty"`

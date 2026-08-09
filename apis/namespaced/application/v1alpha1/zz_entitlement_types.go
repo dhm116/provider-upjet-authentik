@@ -16,7 +16,7 @@ import (
 type EntitlementInitParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/application/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/application/v1alpha1.Application
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	Application *string `json:"application,omitempty" tf:"application,omitempty"`
 
@@ -55,7 +55,7 @@ type EntitlementObservation struct {
 type EntitlementParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/application/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/application/v1alpha1.Application
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	// +kubebuilder:validation:Optional
 	Application *string `json:"application,omitempty" tf:"application,omitempty"`

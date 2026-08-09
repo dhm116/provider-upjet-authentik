@@ -24,7 +24,7 @@ type UserInitParameters struct {
 
 	// (List of String) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Group
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Group
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Groups []*string `json:"groups,omitempty" tf:"groups,omitempty"`
 
@@ -54,7 +54,7 @@ type UserInitParameters struct {
 
 	// (List of String) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Role
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Roles []*string `json:"roles,omitempty" tf:"roles,omitempty"`
 
@@ -137,7 +137,7 @@ type UserParameters struct {
 
 	// (List of String) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Group
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Group
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Groups []*string `json:"groups,omitempty" tf:"groups,omitempty"`
@@ -172,7 +172,7 @@ type UserParameters struct {
 
 	// (List of String) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Role
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Roles []*string `json:"roles,omitempty" tf:"roles,omitempty"`

@@ -11,7 +11,7 @@ import (
 
 const (
 	resourcePrefix = "authentik"
-	modulePath     = "github.com/dhm116/provider-authentik"
+	modulePath     = "github.com/dhm116/provider-upjet-authentik"
 )
 
 //go:embed schema.json

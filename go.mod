@@ -1,4 +1,4 @@
-module github.com/dhm116/provider-authentik
+module github.com/dhm116/provider-upjet-authentik
 
 go 1.26.5
 

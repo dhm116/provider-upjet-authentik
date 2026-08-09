@@ -23,7 +23,7 @@ type OutpostInitParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (List of Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Proxy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Proxy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	ProtocolProviders []*float64 `json:"protocolProviders,omitempty" tf:"protocol_providers,omitempty"`
 
@@ -88,7 +88,7 @@ type OutpostParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// (List of Number)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Proxy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Proxy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	ProtocolProviders []*float64 `json:"protocolProviders,omitempty" tf:"protocol_providers,omitempty"`

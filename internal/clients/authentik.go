@@ -11,8 +11,8 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/terraform"
 
-	clusterv1beta1 "github.com/dhm116/provider-authentik/apis/cluster/v1beta1"
-	namespacedv1beta1 "github.com/dhm116/provider-authentik/apis/namespaced/v1beta1"
+	clusterv1beta1 "github.com/dhm116/provider-upjet-authentik/apis/cluster/v1beta1"
+	namespacedv1beta1 "github.com/dhm116/provider-upjet-authentik/apis/namespaced/v1beta1"
 )
 
 const (

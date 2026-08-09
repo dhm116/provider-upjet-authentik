@@ -34,7 +34,7 @@ type GroupInitParameters struct {
 
 	// (List of Number) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Users []*float64 `json:"users,omitempty" tf:"users,omitempty"`
 
@@ -100,7 +100,7 @@ type GroupParameters struct {
 
 	// (List of Number) Generated.
 	// Generated.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/authentik/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/authentik/v1alpha1.User
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Users []*float64 `json:"users,omitempty" tf:"users,omitempty"`

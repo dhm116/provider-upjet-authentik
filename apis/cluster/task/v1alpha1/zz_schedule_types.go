@@ -149,7 +149,7 @@ type ScheduleInitParameters struct {
 	Crontab *string `json:"crontab,omitempty" tf:"crontab,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Scim
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Scim
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	ModelID *string `json:"modelId,omitempty" tf:"model_id,omitempty"`
 
@@ -451,7 +451,7 @@ type ScheduleParameters struct {
 	Crontab *string `json:"crontab,omitempty" tf:"crontab,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Scim
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Scim
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	ModelID *string `json:"modelId,omitempty" tf:"model_id,omitempty"`

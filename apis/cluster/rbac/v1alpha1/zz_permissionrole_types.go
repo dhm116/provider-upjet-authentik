@@ -142,7 +142,7 @@ type PermissionRoleInitParameters struct {
 	Model *string `json:"model,omitempty" tf:"model,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	ObjectID *string `json:"objectId,omitempty" tf:"object_id,omitempty"`
 
@@ -158,7 +158,7 @@ type PermissionRoleInitParameters struct {
 	Permission *string `json:"permission,omitempty" tf:"permission,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Role
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Role *string `json:"role,omitempty" tf:"role,omitempty"`
 
@@ -442,7 +442,7 @@ type PermissionRoleParameters struct {
 	Model *string `json:"model,omitempty" tf:"model,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/flow/v1alpha1.Flow
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/flow/v1alpha1.Flow
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",true)
 	// +kubebuilder:validation:Optional
 	ObjectID *string `json:"objectId,omitempty" tf:"object_id,omitempty"`
@@ -460,7 +460,7 @@ type PermissionRoleParameters struct {
 	Permission *string `json:"permission,omitempty" tf:"permission,omitempty"`
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1.Role
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Role *string `json:"role,omitempty" tf:"role,omitempty"`

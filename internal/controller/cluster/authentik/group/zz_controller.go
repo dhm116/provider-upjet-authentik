@@ -21,8 +21,8 @@ import (
 	"github.com/pkg/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/dhm116/provider-authentik/apis/cluster/authentik/v1alpha1"
-	features "github.com/dhm116/provider-authentik/internal/features"
+	v1alpha1 "github.com/dhm116/provider-upjet-authentik/apis/cluster/authentik/v1alpha1"
+	features "github.com/dhm116/provider-upjet-authentik/internal/features"
 )
 
 // SetupWebhookWithManager registers the conversion webhook for Group.

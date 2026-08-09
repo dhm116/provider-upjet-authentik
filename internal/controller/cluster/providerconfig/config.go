@@ -8,7 +8,7 @@ import (
 	"github.com/crossplane/upjet/v2/pkg/controller"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/dhm116/provider-authentik/apis/cluster/v1beta1"
+	"github.com/dhm116/provider-upjet-authentik/apis/cluster/v1beta1"
 )
 
 // SetupWebhookWithManager registers the conversion webhook for ProviderConfig.

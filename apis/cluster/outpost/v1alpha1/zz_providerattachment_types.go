@@ -17,7 +17,7 @@ type ProviderAttachmentInitParameters struct {
 
 	// (String) The ID of the outpost.
 	// The ID of the outpost.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/outpost/v1alpha1.Outpost
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/outpost/v1alpha1.Outpost
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Outpost *string `json:"outpost,omitempty" tf:"outpost,omitempty"`
 
@@ -31,7 +31,7 @@ type ProviderAttachmentInitParameters struct {
 
 	// (Number) The ID of the provider.
 	// The ID of the provider.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Proxy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Proxy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	ProtocolProvider *float64 `json:"protocolProvider,omitempty" tf:"protocol_provider,omitempty"`
 
@@ -62,7 +62,7 @@ type ProviderAttachmentParameters struct {
 
 	// (String) The ID of the outpost.
 	// The ID of the outpost.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/outpost/v1alpha1.Outpost
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/outpost/v1alpha1.Outpost
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Outpost *string `json:"outpost,omitempty" tf:"outpost,omitempty"`
@@ -77,7 +77,7 @@ type ProviderAttachmentParameters struct {
 
 	// (Number) The ID of the provider.
 	// The ID of the provider.
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/provider/v1alpha1.Proxy
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/provider/v1alpha1.Proxy
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	ProtocolProvider *float64 `json:"protocolProvider,omitempty" tf:"protocol_provider,omitempty"`

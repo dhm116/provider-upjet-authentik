@@ -36,7 +36,7 @@ type BindingInitParameters struct {
 
 	// (String) UUID of the policy
 	// UUID of the policy
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/policy/v1alpha1.Expression
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/policy/v1alpha1.Expression
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Policy *string `json:"policy,omitempty" tf:"policy,omitempty"`
 
@@ -50,7 +50,7 @@ type BindingInitParameters struct {
 
 	// (String) ID of the object this binding should apply to
 	// ID of the object this binding should apply to
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/application/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/application/v1alpha1.Application
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	Target *string `json:"target,omitempty" tf:"target,omitempty"`
 
@@ -140,7 +140,7 @@ type BindingParameters struct {
 
 	// (String) UUID of the policy
 	// UUID of the policy
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/policy/v1alpha1.Expression
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/policy/v1alpha1.Expression
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Policy *string `json:"policy,omitempty" tf:"policy,omitempty"`
@@ -155,7 +155,7 @@ type BindingParameters struct {
 
 	// (String) ID of the object this binding should apply to
 	// ID of the object this binding should apply to
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/cluster/application/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/cluster/application/v1alpha1.Application
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractParamPath("uuid",false)
 	// +kubebuilder:validation:Optional
 	Target *string `json:"target,omitempty" tf:"target,omitempty"`

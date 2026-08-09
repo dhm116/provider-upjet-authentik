@@ -34,14 +34,14 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	apisCluster "github.com/dhm116/provider-authentik/apis/cluster"
-	apisNamespaced "github.com/dhm116/provider-authentik/apis/namespaced"
-	"github.com/dhm116/provider-authentik/config"
-	"github.com/dhm116/provider-authentik/internal/clients"
-	controllerCluster "github.com/dhm116/provider-authentik/internal/controller/cluster"
-	controllerNamespaced "github.com/dhm116/provider-authentik/internal/controller/namespaced"
-	"github.com/dhm116/provider-authentik/internal/features"
-	"github.com/dhm116/provider-authentik/internal/version"
+	apisCluster "github.com/dhm116/provider-upjet-authentik/apis/cluster"
+	apisNamespaced "github.com/dhm116/provider-upjet-authentik/apis/namespaced"
+	"github.com/dhm116/provider-upjet-authentik/config"
+	"github.com/dhm116/provider-upjet-authentik/internal/clients"
+	controllerCluster "github.com/dhm116/provider-upjet-authentik/internal/controller/cluster"
+	controllerNamespaced "github.com/dhm116/provider-upjet-authentik/internal/controller/namespaced"
+	"github.com/dhm116/provider-upjet-authentik/internal/features"
+	"github.com/dhm116/provider-upjet-authentik/internal/version"
 )
 
 const (
@@ -84,7 +84,7 @@ func main() {
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 
 	zl := zap.New(zap.UseDevMode(*debug))
-	log := logging.NewLogrLogger(zl.WithName("provider-authentik"))
+	log := logging.NewLogrLogger(zl.WithName("provider-upjet-authentik"))
 	if *debug {
 		// The controller-runtime runs with a no-op logger by default. It is
 		// *very* verbose even at info level, so we only provide it a real
@@ -121,7 +121,7 @@ func main() {
 
 	mgr, err := ctrl.NewManager(cfg, ctrl.Options{
 		LeaderElection:   *leaderElection,
-		LeaderElectionID: "crossplane-leader-election-provider-authentik",
+		LeaderElectionID: "crossplane-leader-election-provider-upjet-authentik",
 		Cache: cache.Options{
 			SyncPeriod: syncPeriod,
 		},

@@ -16,7 +16,7 @@ import (
 type EndpointsInitParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/endpoints/v1alpha1.ConnectorAgent
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/endpoints/v1alpha1.ConnectorAgent
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	Connector *string `json:"connector,omitempty" tf:"connector,omitempty"`
 
@@ -61,7 +61,7 @@ type EndpointsObservation struct {
 type EndpointsParameters struct {
 
 	// (String)
-	// +crossplane:generate:reference:type=github.com/dhm116/provider-authentik/apis/namespaced/endpoints/v1alpha1.ConnectorAgent
+	// +crossplane:generate:reference:type=github.com/dhm116/provider-upjet-authentik/apis/namespaced/endpoints/v1alpha1.ConnectorAgent
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/v2/pkg/resource.ExtractResourceID()
 	// +kubebuilder:validation:Optional
 	Connector *string `json:"connector,omitempty" tf:"connector,omitempty"`
